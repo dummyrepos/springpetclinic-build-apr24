@@ -15,6 +15,13 @@ pipeline {
 		mail bcc: '', body: 'Build completed', cc: '', from: '', replyTo: '', subject: 'Build completed', to: 'all@learnigthoughts.io'
 	  } 
 	}
+	stage('tests'){
+		steps {
+			sh 'echo running selenium test'
+			sh 'echo running api tests'
+			sh 'echo running performance test'
+		}
+	}
 	
   }
     
