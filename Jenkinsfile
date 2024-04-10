@@ -22,7 +22,7 @@ pipeline {
 			mail bcc: 'all@learningthoughts.io',
 				 from: 'jenkins@learningthouths.io',
 				 to: "dev@learningthoughs.io",
-				 subject: "Build of ${JOB_BASE_NAME} with Build Id ${BUILD_ID} is failed"
+				 subject: "Build of ${JOB_BASE_NAME} with Build Id ${BUILD_ID} is failed",
 				 body: "Refer to ${RUN_DISPLAY_URL} for more info"
 
 		}
@@ -30,7 +30,7 @@ pipeline {
 			mail bcc: 'all@learningthoughts.io',
 				 from: 'jenkins@learningthouths.io',
 				 to: "dev@learningthoughs.io",
-				 subject: "Build of ${JOB_BASE_NAME} with Build Id ${BUILD_ID} is success"
+				 subject: "Build of ${JOB_BASE_NAME} with Build Id ${BUILD_ID} is success",
 				 body: "Refer to ${RUN_DISPLAY_URL} for more info"
 		}
 	  } 
