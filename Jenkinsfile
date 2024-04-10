@@ -12,7 +12,7 @@ pipeline {
 	stage('build') {
 	  steps {
 		mail bcc: '', body: 'Build started', cc: '', from: '', replyTo: '', subject: 'Build started', to: 'all@learnigthoughts.io'
-		sh 'mvn ${params.MAVEN_GOAL}'
+		sh "mvn ${params.MAVEN_GOAL}"
 		junit testResults: '**/surefire-reports/*.xml'
 		archive '**/target/spring-petclinic-*.jar'
 		mail bcc: '', body: 'Build completed', cc: '', from: '', replyTo: '', subject: 'Build completed', to: 'all@learnigthoughts.io'
